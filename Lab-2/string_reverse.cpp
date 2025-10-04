@@ -6,9 +6,20 @@ using namespace std;
 int main()
 {
     // Take the max size of the string as input
-    int maxSize;
+    string maxSizeStr;
     cout << "Enter the maximum length of the string: ";
-    cin >> maxSize;
+    cin >> maxSizeStr;
+
+    // Check if the input is a number
+    for (int i = 0; i < maxSizeStr.length(); i++)
+    {
+        if (!isdigit(maxSizeStr[i]))
+        {
+            cout << "Invalid input. Please enter a number." << endl;
+            return 0;
+        }
+    }
+    int maxSize = stoi(maxSizeStr);
 
     // Clear the input buffer (or the next inputs will take it)
     cin.ignore();

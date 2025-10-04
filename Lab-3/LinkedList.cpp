@@ -220,7 +220,7 @@ int main()      // Test driver for list class
     bool keepRunning = true;
     while (keepRunning) 
     {
-        int userChoice;
+        string userChoiceStr;
         cout << "____ Linked-List Operations Menu ____" << endl;
         cout << "[1] Insert Nodes at the Head" << endl;
         cout << "[2] Insert Node at 3rd position" << endl;
@@ -230,13 +230,48 @@ int main()      // Test driver for list class
         cout << "[6] Exit" << endl;
         cout << "\nChoice: ";
 
-        cin >> userChoice;
+        cin >> userChoiceStr;
+
+        // Check if the input is a number
+        bool invalidInput = false;
+        for (int i = 0; i < userChoiceStr.length(); i++) 
+        {
+            if (!isdigit(userChoiceStr[i])) 
+            {
+                cout << "Invalid input. Please enter a number." << endl;
+                invalidInput = true;
+                break;
+            }
+        }
+        if (invalidInput) 
+        {
+            continue;
+        }
+        int userChoice = stoi(userChoiceStr);
 
         switch (userChoice) 
         {
             case 1:
                 cout << "Enter value to insert: ";
-                cin >> userChoice;
+                
+                // Check if the input is a number
+                invalidInput = false;
+                userChoiceStr = "";
+                cin >> userChoiceStr;
+                for (int i = 0; i < userChoiceStr.length(); i++) 
+                {
+                    if (!isdigit(userChoiceStr[i])) 
+                    {
+                        cout << "Invalid input. Please enter a number." << endl;
+                        invalidInput = true;
+                        break;
+                    }
+                }
+                if (invalidInput) 
+                {
+                    break;
+                }
+                userChoice = stoi(userChoiceStr);
                 list1->insertAtBeggining(userChoice);
                 cout << "Value " << userChoice << " inserted at head." << endl;
                 break;
