@@ -26,6 +26,17 @@ This repository contains the implementation and solutions for **Labs** of my Dat
 - **CircularLinkedList.cpp**:
   - Purpose: Implements a circular linked list with operations for insertion, deletion, and traversal in a circular structure.
   - Input/Output: Takes values for insertion/deletion operations and displays the circular list structure and operation outcomes.
+### Lab4
+- **tower_of_hanoi.cpp**:
+  - Purpose: Implements a Game of Tower of Hanoi and a Algorithm that solves it.
+  - Input/Output: Takes in how many disks the game should include and displays Information about how the Algorithm solves it including the number of total moves.
+- **braces_checker.cpp**:
+  - Purpose: Tests if an mathematical expression makes correct use of closing and opening braces for all types of braces ( () , [] , {} ).
+  - Input/Output: Takes a mathematical expression in form of a string as Input and displays whether the expression makes correct use of braces or where there was a mistake.
+- **string_reversal_using_stack.cpp**:
+  - Purpose: Implements a reversal of a string using a stack.
+  - Input/Output: Takes a string for reversal and displays the reversed string.
+
 
 ## How to Run
 1. Clone this repository:
@@ -41,3 +52,7 @@ You can:
 - Add helpful comments in code files.
 - Suggest more efficient algorithms.
 - Fix spelling/grammar in code or documentation.
+
+
+
+
