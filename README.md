@@ -34,8 +34,8 @@ This repository contains the implementation and solutions for **Labs** of my Dat
   - Purpose: Tests if an mathematical expression makes correct use of closing and opening braces for all types of braces ( () , [] , {} ).
   - Input/Output: Takes a mathematical expression in form of a string as Input and displays whether the expression makes correct use of braces or where there was a mistake.
 - **string_reversal_using_stack.cpp**:
-  Purpose: Implements a reversal of a string using a stack.
-  Input/Output: Takes a string for reversal and displays the reversed string.
+  - Purpose: Implements a reversal of a string using a stack.
+  - Input/Output: Takes a string for reversal and displays the reversed string.
 
 
 ## How to Run
@@ -52,6 +52,7 @@ You can:
 - Add helpful comments in code files.
 - Suggest more efficient algorithms.
 - Fix spelling/grammar in code or documentation.
+
 
 
 
