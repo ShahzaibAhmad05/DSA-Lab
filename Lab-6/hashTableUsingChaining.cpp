@@ -76,13 +76,13 @@ int main() {
     for (int key : keys) ht.insert(key);
 
     cout << "Before Resizing (m=" << ht.getSize() << ", n=" << ht.getCount() << ")\n";
-    cout << "Load Factor (λ) = " << fixed << setprecision(3) << ht.loadFactor() << "\n";
+    cout << "Load Factor (lambda) = " << fixed << setprecision(3) << ht.loadFactor() << "\n";
     ht.display();
 
     ht.rehash();
 
     cout << "\nAfter Resizing (m=" << ht.getSize() << ", n=" << ht.getCount() << ")\n";
-    cout << "Load Factor (λ) = " << fixed << setprecision(3) << ht.loadFactor() << "\n";
+    cout << "Load Factor (lambda) = " << fixed << setprecision(3) << ht.loadFactor() << "\n";
     ht.display();
 
     return 0;
