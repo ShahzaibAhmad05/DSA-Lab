@@ -91,7 +91,7 @@ long long measureTime(void (*func)(int[], int), int arr[], int n) {
     auto start = chrono::high_resolution_clock::now();
     func(arr, n);
     auto end = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<chrono::milliseconds>(end - start);
+    auto duration = chrono::duration_cast<chrono::microseconds>(end - start);
     return duration.count();
 }
 
