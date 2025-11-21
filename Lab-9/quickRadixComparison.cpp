@@ -114,7 +114,7 @@ long long measureTime(SortFunc func, int arr[], int n) {
     auto start = chrono::high_resolution_clock::now();
     func(arr, n);
     auto end = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<chrono::milliseconds>(end - start);
+    auto duration = chrono::duration_cast<chrono::microseconds>(end - start);
     return duration.count();
 }
 
@@ -139,12 +139,12 @@ int main() {
         // Quick Sort timing
         copyArray(baseArr, temp, n);
         long long tQuick = measureTime(quickSort, temp, n);
-        cout << "quick sort time:  " << tQuick << " ms\n";
+        cout << "quick sort time:  " << tQuick << " microsec\n";
 
         // Radix Sort timing
         copyArray(baseArr, temp, n);
         long long tRadix = measureTime(radixSort, temp, n);
-        cout << "radix sort time:  " << tRadix << " ms\n";
+        cout << "radix sort time:  " << tRadix << " microsec\n";
 
         delete[] baseArr;
         delete[] temp;
