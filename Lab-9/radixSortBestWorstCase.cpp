@@ -79,7 +79,7 @@ long long measureTime(void (*func)(int[], int), int arr[], int n) {
     auto start = chrono::high_resolution_clock::now();
     func(arr, n);
     auto end = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<chrono::milliseconds>(end - start);
+    auto duration = chrono::duration_cast<chrono::microseconds>(end - start);
     return duration.count();
 }
 
@@ -106,12 +106,12 @@ int main() {
         // "Best case" (ascending)
         copyArray(asc, temp, n);
         long long tBest = measureTime(radixSort, temp, n);
-        cout << "Best case (ascending):   " << tBest << " ms\n";
+        cout << "Best case (ascending):   " << tBest << " microsec\n";
 
         // "Worst case" (descending)
         copyArray(desc, temp, n);
         long long tWorst = measureTime(radixSort, temp, n);
-        cout << "Worst case (descending): " << tWorst << " ms\n";
+        cout << "Worst case (descending): " << tWorst << " microsec\n";
 
         delete[] asc;
         delete[] desc;

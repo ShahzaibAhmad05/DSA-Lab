@@ -115,12 +115,12 @@ int main() {
         // Best Case (ascending + good pivot)
         copyArray(asc, temp, n);
         long long tBest = measureTime(quickSortBest, temp, n);
-        cout << "Best case (ascending, middle pivot): " << tBest << " ms\n";
+        cout << "Best case (ascending, middle pivot): " << tBest << " microsec\n";
 
         // Worst Case (descending + first pivot)
         copyArray(desc, temp, n);
         long long tWorst = measureTime(quickSortWorst, temp, n);
-        cout << "Worst case (descending, first pivot): " << tWorst << " ms\n";
+        cout << "Worst case (descending, first pivot): " << tWorst << " microsec\n";
 
         delete[] asc;
         delete[] desc;
