@@ -20,7 +20,7 @@ int main() {
         int u, v;
         cin >> u >> v;
 
-        // store both directions (undirected)
+        // store both directions (since it is undirected)
         adj[u].push_back(v);
         adj[v].push_back(u);
     }

@@ -27,9 +27,6 @@ int main() {
     addEdge(7, 8);
     addEdge(4, 8);
 
-    // sort neighbors so bfs processes in ascending order
-    for (int i = 1; i <= V; i++) sort(adj[i].begin(), adj[i].end());
-
     int start = 2;
     vector<bool> visited(V + 1, false); 
     queue<int> q;       // Queue for traversal
